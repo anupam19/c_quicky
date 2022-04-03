@@ -13,7 +13,8 @@ address is never used, then the function's own assembler code is never reference
 GCC does not `inline` any functions when not optimizing unless you specify the ``always_inline'` attribute for the function, like this:
 
 `     /* Prototype.  */
-     inline void foo (const char) __attribute__((always_inline));`
+
+inline void foo (const char) __attribute__((always_inline));`
 The remainder of this section is specific to GNU C89 inlining.
 
 When an `inline` function is not `static`, then the compiler must assume that there may be calls from other source files; since a global symbol can be defined only once in any program, the function must not be defined in the other source files, so the calls therein cannot be integrated. Therefore, a non-static inline function is always compiled on its own in the usual fashion.
