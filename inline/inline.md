@@ -13,6 +13,7 @@ address is never used, then the function's own assembler code is never reference
 GCC does not `inline` any functions when not optimizing unless you specify the ``always_inline'` attribute for the function, like this:
 
 `/* Prototype.  */`
+
 `inline void foo (const char) __attribute__((always_inline));`
 
 The remainder of this section is specific to GNU C89 inlining.
